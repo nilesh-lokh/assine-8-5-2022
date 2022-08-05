@@ -39,7 +39,7 @@ public class EmController {
 		
 		return new ResponseEntity<List<Employee>>(multisave,HttpStatus.OK);}
 	
-@GetMapping(value="get1")
+@GetMapping(value="get1",produces = "application/json")
 public ResponseEntity<Optional<Employee>> byi(@RequestBody int a){
 	
 	Optional<Employee> getone = serviceIMPL.getone(a);
